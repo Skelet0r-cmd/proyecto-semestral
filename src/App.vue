@@ -1,15 +1,15 @@
 <template>
-  <h2>Hola</h2>
+  <LoginComponent></LoginComponent>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import LoginComponent from "./components/LoginComponent.vue";
 
 export default {
   name: "App",
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    HelloWorld,
+    LoginComponent,
   },
 };
 </script>
