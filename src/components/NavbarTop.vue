@@ -9,7 +9,7 @@
     style="justify-content: flex-end">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Sessions History</a>
+          <a class="nav-link" href="#">Session History</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Yield Chart</a>

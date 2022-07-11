@@ -36,7 +36,7 @@ import NavbarTop from "@/components/NavbarTop";
 import FooterBot from "@/components/FooterBot.vue";
 import axios from "axios";
 export default {
-  name: "SessionComponent",
+  name: "SessionHistoryComponent",
   data() {
     return {
       Listasessions: null,
@@ -46,14 +46,6 @@ export default {
   components: {
     NavbarTop,
     FooterBot,
-  },
-  methods: {
-    editar(id) {
-      this.$router.push("/editar/" + id);
-    },
-    nuevo() {
-      this.$router.push("/nuevo");
-    },
   },
   mounted: function () {
     let session = "http://solodata.es/pacientes?page=" + this.pagina;
