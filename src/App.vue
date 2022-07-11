@@ -1,7 +1,9 @@
 <template>
-  <!-- <LoginComponent></LoginComponent>-->
-  <!--<SessionComponent></SessionComponent>-->
-  <YielChartComponent></YielChartComponent>
+  <!--<LoginComponent></LoginComponent>-->
+  <!--<SessionHistoryComponent></SessionHistoryComponent>-->
+  <div id="app">
+    <PlanetChart />
+  </div>
 </template>
 
 <script>
@@ -9,15 +11,14 @@
 import LoginComponent from "./components/LoginComponent.vue";
 // eslint-disable-next-line no-unused-vars
 import SessionHistoryComponent from "./components/SessionHistoryComponent.vue";
-import YielChartComponent from "./components/YielChartComponent.vue";
-
+import PlanetChart from "./components/PlanetChart.vue";
 export default {
   name: "App",
   components: {
     // eslint-disable-next-line vue/no-unused-components
     //LoginComponent,
-    //SessionComponent,
-    YielChartComponent,
+    //SessionHistoryComponent,
+    PlanetChart,
   },
 };
 </script>

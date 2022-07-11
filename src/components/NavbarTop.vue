@@ -2,7 +2,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#" style="padding-left: 40px;">
-      <img src="https://cdn-icons.flaticon.com/png/512/4008/premium/4008981.png?token=exp=1657502771~hmac=6ca37c21c4b18abfabfeb131237a3f75" id="icon"
+      <img src="https://64.media.tumblr.com/1b14ac82c0f3e973ec219c868adf705c/d73813b5183a0f5b-8b/s540x810/4d3ce13f803a00ce55ba76cb70fb784ae14a3240.pnj" 
+      id="icon"
       style="width:10%">
       Dashboard Sessions</a>
     <div class="collapse navbar-collapse" id="navbarNav" 
