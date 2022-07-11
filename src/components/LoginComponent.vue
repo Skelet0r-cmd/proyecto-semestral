@@ -1,4 +1,5 @@
 <template>
+  <NavbarTop />
   <!-- Clase fadeIn presenta los elementos en orden al agregarle una transición -->
   <div class="home">
     <div class="wrapper fadeInDown">
@@ -56,7 +57,7 @@
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
+import NavbarTop from "@/components/NavbarTop";
 import axios from "axios";
 export default {
   name: "LoginComponent",
@@ -70,6 +71,9 @@ export default {
       error: false,
       error_msg: "",
     };
+  },
+  components: {
+    NavbarTop,
   },
   methods: {
     login() {
