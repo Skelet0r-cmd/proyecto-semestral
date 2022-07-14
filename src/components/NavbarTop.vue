@@ -10,13 +10,13 @@
     style="justify-content: flex-end">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Session History</a>
+          <a class="nav-link" href="SessionHistoryView">Session History</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Yield Chart</a>
+          <a class="nav-link" href="PlanetChartView">Yield Chart</a>
         </li>
           <li class="nav-item active">
-          <a class="nav-link" href="#">Log Out</a>
+          <a class="nav-link" href="LogOutView">Log Out</a>
         </li>
       </ul>
     </div>

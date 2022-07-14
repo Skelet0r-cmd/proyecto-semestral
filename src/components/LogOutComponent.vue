@@ -15,22 +15,6 @@
         </div>
         <!-- Login Form -->
         <form v-on:submit.prevent="login">
-          <input
-            type="text"
-            id="login"
-            class="fadeIn second"
-            name="login"
-            placeholder="Usuario"
-            v-model="usuario"
-          />
-          <input
-            type="text"
-            id="password"
-            class="fadeIn third"
-            name="login"
-            placeholder="Contraseña"
-            v-model="password"
-          />
           <div id="inline">
             <input
               id="ingresar"
@@ -40,17 +24,6 @@
             />
           </div>
         </form>
-        <input
-          id="registrar"
-          type="submit"
-          class="fadeIn fifth"
-          value="Registrar"
-        />
-        <!-- Alert of bootstrap: point of pattern specialization 1, semester project -->
-        <!-- Remind Passowrd -->
-        <div class="alert alert-danger" role="alert" v-if="error">
-          {{ error_msg }}
-        </div>
       </div>
     </div>
   </div>
@@ -60,7 +33,7 @@
 import NavbarTop from "@/components/NavbarTop";
 import axios from "axios";
 export default {
-  name: "LoginComponent",
+  name: "LogOutComponent",
   props: {
     msg: String,
   },
@@ -82,10 +55,9 @@ export default {
         password: this.password,
       };
       // ACTUALIZAR POSTEIORMENTE CON LA URL DE NUESTRA API.
-      axios.post("http://localhost:3000/auth/singUp", json).then((data) => {
+      axios.post("http://solodata.es/auth", json).then((data) => {
         // Se debe ingresar el estado de la solicitud para verificar esta.
         if (data.data.status == "ok") {
-          this.$router.push("/SessionHistoryView");
           localStorage.token = data.data.result.token;
         } else {
           this.error = true;
@@ -99,7 +71,7 @@ export default {
         password: this.password,
       };
       // ACTUALIZAR POSTEIORMENTE CON LA URL DE NUESTRA API.
-      axios.post("http://localhost:3000/auth/singUp", json).then((data) => {
+      axios.post("http://localhost:9000/api/users/", json).then((data) => {
         // Se debe ingresar el estado de la solicitud para verificar esta.
         if (data.data.status == "ok") {
           localStorage.token = data.data.result.token;

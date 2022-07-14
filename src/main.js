@@ -9,6 +9,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 // eslint-disable-next-line no-unused-vars
 import line from "vue-chartjs";
+
 // eslint-disable-next-line no-unused-vars
 import moment from "vue-moment";
-createApp(App).use(store).mount("#app");
+
+import router from "./router";
+createApp(App).use(router).use(store).mount("#app");
