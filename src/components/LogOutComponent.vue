@@ -18,6 +18,22 @@
         </div>
         <!-- Login Form -->
         <form v-on:submit.prevent="login">
+          <input
+            type="text"
+            id="login"
+            class="fadeIn second"
+            name="login"
+            placeholder="Usuario"
+            v-model="usuario"
+          />
+          <input
+            type="text"
+            id="password"
+            class="fadeIn third"
+            name="login"
+            placeholder="Contraseña"
+            v-model="password"
+          />
           <div id="inline">
             <input
               id="ingresar"
@@ -27,6 +43,17 @@
             />
           </div>
         </form>
+        <input
+          id="registrar"
+          type="submit"
+          class="fadeIn fifth"
+          value="Registrar"
+        />
+        <!-- Alert of bootstrap: point of pattern specialization 1, semester project -->
+        <!-- Remind Passowrd -->
+        <div class="alert alert-danger" role="alert" v-if="error">
+          {{ error_msg }}
+        </div>
       </div>
     </div>
   </div>
