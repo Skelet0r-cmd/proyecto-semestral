@@ -48,7 +48,7 @@ export default {
     FooterBot,
   },
   mounted: function () {
-    let session = "http://solodata.es/pacientes?page=" + this.pagina;
+    let session = "http://localhost:3000/auth/getUserById" + this.pagina;
     axios.get(session).then((data) => {
       this.Listasessions = data.data;
     });
