@@ -82,7 +82,7 @@ export default {
         password: this.password,
       };
       // ACTUALIZAR POSTEIORMENTE CON LA URL DE NUESTRA API.
-      axios.post("http://localhost:3000/auth/singUp", json).then((data) => {
+      axios.post("http://localhost:3000/auth/singIn", json).then((data) => {
         // Se debe ingresar el estado de la solicitud para verificar esta.
         if (data.data.status == "ok") {
           this.$router.push("/SessionHistoryView");

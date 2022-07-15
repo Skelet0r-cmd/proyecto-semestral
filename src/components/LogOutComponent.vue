@@ -1,5 +1,8 @@
 <template>
   <NavbarTop />
+  <div class="alert alert-danger" role="alert">
+    YOU ARE LOGGED OUT, PLEASE LOGIN AGAIN OR REGISTER
+  </div>
   <!-- Clase fadeIn presenta los elementos en orden al agregarle una transición -->
   <div class="home">
     <div class="wrapper fadeInDown">
@@ -55,7 +58,7 @@ export default {
         password: this.password,
       };
       // ACTUALIZAR POSTEIORMENTE CON LA URL DE NUESTRA API.
-      axios.post("http://solodata.es/auth", json).then((data) => {
+      axios.post("http://localhost:3000/auth/singIn", json).then((data) => {
         // Se debe ingresar el estado de la solicitud para verificar esta.
         if (data.data.status == "ok") {
           localStorage.token = data.data.result.token;
@@ -71,7 +74,7 @@ export default {
         password: this.password,
       };
       // ACTUALIZAR POSTEIORMENTE CON LA URL DE NUESTRA API.
-      axios.post("http://localhost:9000/api/users/", json).then((data) => {
+      axios.post("http://localhost:3000/auth/singUp", json).then((data) => {
         // Se debe ingresar el estado de la solicitud para verificar esta.
         if (data.data.status == "ok") {
           localStorage.token = data.data.result.token;
